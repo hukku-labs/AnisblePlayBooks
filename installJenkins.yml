@@ -37,8 +37,7 @@
      port: 8080
   - name: init password jenkin
     shell: cat /var/lib/jenkins/secrets/initialAdminPassword
-    changed_when: false
-    register: result
+     register: result
   - name: print init password jenkins
     debug:
      var: result.stdout
